@@ -1,9 +1,74 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-Hello World!
-</body>
-</html>
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
+<!--  If necessary, please modify the charset parameter to specify the        -->
+<!--  character set of your HTML page.                                        -->
+<!--  ----------------------------------------------------------------------  -->
+
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<script>
+ function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500); 
+</script>
+
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add the following <FORM> element to your page.             -->
+<!--  ----------------------------------------------------------------------  -->
+
+<form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+
+<input type=hidden name='captcha_settings' value='{"keyname":"FRN_WebToLead","fallback":"true","orgId":"00D290000000W6y","ts":""}'>
+<input type=hidden name="oid" value="00D290000000W6y">
+<input type=hidden name="retURL" value="https://www.google.com/">
+<input type="hidden"
+name="debug"
+value="1" />
+
+<input type="hidden"
+name="debugEmail"
+value="lochana.rajput@eternussolutions.com" />
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+<!--  these lines if you wish to test in debug mode.                          -->
+<!--  <input type="hidden" name="debug" value=1>                              -->
+<!--  <input type="hidden" name="debugEmail"                                  -->
+<!--  value="swapnil.shrikhande@eternussolutions.com">                        -->
+<!--  ----------------------------------------------------------------------  -->
+
+Calling for:<select  id="00Nj000000BKJje" name="00Nj000000BKJje" title="Calling for"><option value="">--None--</option><option value="Self">Self</option>
+<option value="Loved One">Loved One</option>
+<option value="Client/Patient">Client/Patient</option>
+</select><br>
+
+18 or Older:<input  id="00N290000019zl9" name="00N290000019zl9" type="checkbox" value="1" /><br>
+
+<label for="first_name">First Name</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
+
+<label for="last_name">Last Name</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
+
+<label for="phone">Phone</label><input  id="phone" maxlength="40" name="phone" size="20" type="text" /><br>
+
+<label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
+
+<label for="city">City</label><input  id="city" maxlength="40" name="city" size="20" type="text" /><br>
+
+Insurance Type:<select  id="00N290000019zl8" name="00N290000019zl8" title="Insurance Type"><option value="">--None--</option><option value="Employer Provided/Individually Provided">Employer Provided/Individually Provided</option>
+<option value="Government Provided (Medicaid)">Government Provided (Medicaid)</option>
+<option value="Government Provided (Medicare)">Government Provided (Medicare)</option>
+<option value="No Insurance Cash Pay">No Insurance Cash Pay</option>
+<option value="No Insurance, Will Need Financial Assistance">No Insurance, Will Need Financial Assistance</option>
+</select><br>
+
+Insurance Company:<input  id="00N290000019zl5" maxlength="255" name="00N290000019zl5" size="20" type="text" /><br>
+
+Insurance ID Number:<input  id="00N290000019zl6" maxlength="50" name="00N290000019zl6" size="20" type="text" /><br>
+
+Insurance Phone Number:<input  id="00N290000019zl7" maxlength="50" name="00N290000019zl7" size="20" type="text" /><br>
+
+Birthdate:<span class="dateInput dateOnlyInput"><input  id="00Nj000000BKJjV" name="00Nj000000BKJjV" size="12" type="text" /></span><br>
+
+What Prompted Call:<textarea  id="00Nj000000BKJk6" name="00Nj000000BKJk6" rows="4" type="text" wrap="soft"></textarea><br>
+
+<div class="g-recaptcha" data-sitekey="6LeBO6cUAAAAADkzu0ffkW6_XMjDo1Q-dM32YeEU"></div><br>
+<input type="submit" name="submit">
+
+</form>
